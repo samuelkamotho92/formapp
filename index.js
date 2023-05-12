@@ -1,15 +1,15 @@
 //grab form values
 
 document.addEventListener('DOMContentLoaded',function () {
-    const list = document.querySelector('#citizen-ul');
+    const list = document.getElementById('#citizen-ul');
     const form = document.getElementById('getform');
 //delete form 
 list.addEventListener('click',function (e) {
-console.log(e.target.button)
 console.log(e.target.classList)
 if (e.target.className == 'deletebtn') {
-    const li = e.target.parentElement;
-    li.parentNode.removeChild(li);
+    console.log(e.target.parentElement);
+    const tr = e.target.parentElement;
+    tr.parentNode.removeChild(tr);
 }
 });
 
@@ -24,13 +24,17 @@ form.addEventListener("submit",(e)=>{
     const country = document.getElementById('country').value;
     console.log(username,number,id,country);
     //create content element
-    const li = document.createElement('li');
-    const membername = document.createElement('div');
-    const memberid = document.createElement('div');
-    const phoneNumber = document.createElement('div');
-    const countryname = document.createElement('div');
+    const tr = document.createElement('tr');
+    const membername = document.createElement('td');
+    const memberid = document.createElement('td');
+    const countryname = document.createElement('td');
+    const phoneNumber = document.createElement('td');
+    const deleteElement = document.createElement('td');
     const deletebtn = document.createElement('button');
     
+//append the button to element
+    deleteElement.appendChild(deletebtn)
+
     membername.textContent = username;
     memberid.textContent = id;
     phoneNumber.textContent = number;
@@ -41,22 +45,22 @@ form.addEventListener("submit",(e)=>{
     console.log(memberid)
     //add classes
     
-    li.classList.add('content');
-    membername.classList.add('membername');
-    memberid.classList.add('memberid');
-    phoneNumber.classList.add('phoneNumber');
-    countryname.classList.add('country');
+    // li.classList.add('content');
+    // membername.classList.add('membername');
+    // memberid.classList.add('memberid');
+    // phoneNumber.classList.add('phoneNumber');
+    // countryname.classList.add('country');
     deletebtn.classList.add('deletebtn');
 
 
-    li.appendChild(membername);
-    li.appendChild(memberid);
-    li.appendChild(countryname);
-    li.appendChild(phoneNumber);
-    li.appendChild(deletebtn);
+    tr.appendChild(membername);
+    tr.appendChild(memberid);
+    tr.appendChild(phoneNumber);
+    tr.appendChild(countryname);
+    tr.appendChild(deletebtn);
     
-    console.log(li);  
-    list.appendChild(li);
+    console.log(tr);  
+    list.appendChild(tr);
        // clear input
        form.querySelector('input[type="text"]').value = '';
 })

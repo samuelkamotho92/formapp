@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./registration.css"
-    <title>Regsitration</title>
+    <link rel="stylesheet" href="./index.css"
 </head>
 <body>
-    <nav class="header">
+    <!-- <nav class="header">
         <div class="left">
             <ul class="leftNav">
                 <li><a href="./">Home</a></li>
@@ -20,32 +19,52 @@
             <li><a href="#">Profile</a></li>
         </ul>
     </div>
-    </nav>
-<div class="members">
-    <div class="container">
+    </nav> -->
+    <div class="topnav">
+        <a class="active" href="./">Home</a>
+        <a href="./login.html">Login</a>
+        <a href="./registration.html">Register</a>
+        <a href="#profile" class="split">Profile</a>
+      </div> 
+
+      <!-- <div class="members">
+    <div class="">
         <h3>Already Registered Members</h3>
     <ul id="citizen-ul">
     </ul>
     </div>
-</div>
-    <div class="regForm">
-        <form class="myform" id="getform">
-            <h4>REGISTRATION FORM</h4>
-            <div>
+</div> -->
+<table class="center" id="#citizen-ul" style="margin-bottom: 20px">
+    <h3 style="text-align: center; margin-bottom: 5px;">Registered Members</h3>
+      <tr>
+        <th>Username</th>
+        <th>National Id</th> 
+        <th>Number</th> 
+        <th>Country</th> 
+        <th>Action</th>
+      </tr>
+    </table>
+      <div class="container">
+        <div class="registartion form">
+            <header>Sign up</header>
+            <form action="#" class="myform" id="getform">
                 <label for="name">User Name</label>
                 <input type="text" id="name" placeholder="Name">
                 <label for="id">Id</label>
                 <input type="text" id="id" placeholder="National Id">
-            </div>
-            <div>
                 <label for="number">Number</label>
                 <input type="number" id="number" placeholder="Number">
-                <label for="number">Country</label>
-                <input type="text" id="country" placeholder="Country">
-            </div>  
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+              <label for="number">Country</label>
+              <input type="text" id="country" placeholder="Country">            
+              <button type="submit">Submit</button>
+            </form>
+            <div class="signup">
+              <span class="signup">Already have an account?
+               <label for="check"> <a href="./login.html">Sign In</a></label>
+              </span>
+            </div>
+          </div>
+      </div> 
     <script src="./index.js"></script>
 </body>
 </html>
