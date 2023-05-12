@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    nav{
+        background-color: teal;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        text-decoration: none;
+    }
+    nav .left  ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:;
+    }
+    .left ul li{
+    margin: auto 10px;
+    text-decoration: none;
+    list-style: none;
+    }
+    .right{
+        align-self: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-right: 20px;
+    }
+    
+    .right ul li{
+        text-decoration: none;
+        list-style: none;
+    }
+.regForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+    width: 800px;
+    /* background-color: red; */
+}
+
+.myform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: teal;
+    width: 100%;
+    height: 50%;
+    margin: auto 10px;
+    border-radius: 10PX;
+}
+.myform div{
+    margin: 10px;
+}
+
+.members{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./registration.css"
+    <title>Regsitration</title>
+</head>
+<body>
+    <nav class="header">
+        <div class="left">
+            <ul class="leftNav">
+                <li><a href="./">Home</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+    <div class="right">
+        <ul>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </div>
+    </nav>
+<div class="members">
+    <div class="container">
+        <h3>Already Registered Members</h3>
+    <ul id="citizen-ul">
+    </ul>
+    </div>
+</div>
+    <div class="regForm">
+        <form class="myform" id="getform">
+            <h4>REGISTRATION FORM</h4>
+            <div>
+                <label for="name">User Name</label>
+                <input type="text" id="name" placeholder="Name">
+                <label for="id">Id</label>
+                <input type="text" id="id" placeholder="National Id">
+            </div>
+            <div>
+                <label for="number">Number</label>
+                <input type="number" id="number" placeholder="Number">
+                <label for="number">Country</label>
+                <input type="text" id="country" placeholder="Country">
+            </div>  
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
